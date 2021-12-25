@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Contact Us</title>
+	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="js/formValidation.js"></script>
+	<script src="https://kit.fontawesome.com/40ecc49a47.js" crossorigin="anonymous"></script>
+	<script src="js/includeHTML.js"></script>
+</head>
+
+<body>		
+<div>
+	<a class="btn btn-info skip-main" href="#main">Skip to main content</a>
+	<div data-include="./includes/navigation.html"></div>
+	
+	<main id="main" class="p-3">
+		<div class="row">
+			<div class="col-12">
+		<h1 class="text-dark text-center">Contact Us</h1>
+				<div class="m-3">
+					<div class="col-12 text-center py-2">
+						<p>We’re standing by, ready to answer any questions or assist you in booking your next vacation. After filling out this form we will get in touch and see how to best assist you.</p>
+					</div>
+					<div class="w-100 rounded-sm p-3 lightBlue">
+						<p>All fields marked with an <span class="text-danger">*</span> are required.</p>
+						
+						<form id="contact-form" action="https://www.w3schools.com/action_page.php" method="GET" class="needs-validation" novalidate>
+							<div class="form-group row align-items-center">
+								<label for="first-name" class="col-sm-3 col-form-label m-0 font-weight-bold">First Name<span class="text-danger"> *</span></label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="first-name" id="first-name" required maxlength="40">
+									<div class="invalid-feedback">
+										Field Required
+									</div>
+								</div>
+								
+							</div>
+							<div class="form-group row align-items-center">
+								<label for="last-name" class="col-sm-3 col-form-label m-0 font-weight-bold">Last Name<span class="text-danger"> *</span></label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="last-name" id="last-name" required maxlength="60">
+									<div class="invalid-feedback">
+										Field Required
+									</div>
+								</div>
+							</div>
+							<div class="form-group row align-items-center">
+								<label for="email" class="col-sm-3 col-form-label m-0 font-weight-bold">Email<span class="text-danger"> *</span></label>
+								<div class="col-sm-9">
+									<input type="email" class="form-control" name="email" id="email" required>
+									<div class="invalid-feedback">
+										Field Required
+									</div>
+								</div>
+							</div>
+							<div class="form-group row align-items-center">
+									<label for="select1" class="col-sm-3 col-form-label m-0 font-weight-bold">Which type of tourism is most appealing to you</label>
+									<div class="col-sm-9">
+										<select class="custom-select mr-sm-2" name="type" multiple id="type" size="3">
+											<option selected>Select</option>
+											<option value="Beach Tourism">Beach Tourism</option>
+											<option value="Art & Architecture Tourism">Art & Architecture Tourism</option>
+											<option value="Partying">Partying</option>
+											<option value="Gastronomic Tourism (foodie)">Gastronomic Tourism (foodie)</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+							</div>
+							<fieldset class="form-group row" name="grindRadios">
+																<!--make this a required field & add asterisk-->
+
+								<legend class="col-form-label col-sm-3 float-sm-left pt-0 font-weight-bold">Number of people in your party<span class="text-danger"> *</span></legend>													
+								<div class="col-sm-9">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="NumberOfPeople" id="gridRadios1" value="One person" aria-label="One person" required >
+										<label class="form-check-label" for="gridRadios1">
+											One person
+										</label>
+									</div>
+									<div class="form-check">
+								<!--make this a required field & add asterisk-->
+								<input class="form-check-input" type="radio" name="NumberOfPeople" id="gridRadios2" value="2 or more people" aria-label="two or more people" required>
+										<label class="form-check-label" for="gridRadios2">
+											2 or more people
+										</label>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="form-group row">
+								<!--make this a required field & add asterisk-->
+								<legend class="col-form-label col-sm-3 float-sm-left pt-0 font-weight-bold">Reason for your trip (select all that apply)<span class="text-danger"> *</span></legend>
+								<div class="col-sm-9">										
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="reason" id="reason1" value="Vacation (less than 1 month)" aria-label="Vacation (less than 1 month)" required>
+										<label class="form-check-label" for="reason1">
+											Vacation (less than 1 month)
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="reason" id="reason2" value="Medium term stay (2-6 months)" aria-label="Medium term stay (2-6 months)" required>
+										<label class="form-check-label" for="reason2">
+											Medium term stay (2-6 months)
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="reason" id="reason3" value="Thinking about relocating to Spain (immigrating)" aria-label="Thinking about relocating to Spain (immigrating)" required>
+										<label class="form-check-label" for="reason3">
+											Thinking about relocating to Spain (immigrating)
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="reason" id="reason4" value="Other" aria-label="Other" required>
+										<label class="form-check-label" for="reason4">
+											Other
+										</label>
+									</div>
+								</div>
+							</fieldset>
+							<div class="form-group row align-items-center">
+								<label for="comments" class="col-sm-3 col-form-label m-0 font-weight-bold">Comments<span class="text-danger"> *</span></label>
+								<div class="col-sm-9">
+									<div class="form-group mb-0">
+										Please explain in 1-2 paragraphs your motivation for coming to Spain. The more details you can provide, the more we can assist in helping you achieve your goals. Min 100 charcaters, max 500 characters.               
+										<textarea id="comments" name="message" class="w-100" rows="5"
+										minlength="100" maxlength="500" required></textarea>
+										<div class="invalid-feedback">
+											A message is required since we want to know what you're looking for! Please enter 100-500 characters.
+										</div>    
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-row">
+								<div class="col-auto">
+									<button type="reset" class="btn btn-danger mr-1">Reset</button>
+									<button type="submit" onclick="validate()" class="btn btn-success ml-1">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				</div>
+				</div>
+	</main>
+	<div data-include="./includes/footer.html"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+				<script>
+					includeHTML();
+				</script>
+</body>
+</html>
